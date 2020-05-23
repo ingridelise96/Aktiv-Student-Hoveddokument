@@ -17,28 +17,46 @@ I dette kapittelet vil resultatet bli diskutert. Kapittelet vil fokusere på om 
 
 \section{Anbefalinger for utvikling og videre arbeid}
 \label{section:anbefaling-videre-utvikling}
-\subsection{Database}
-Siden systemet inkluderer innlogging og informasjon fra andre kilder enn Brønnøysundregisteret er det behov for en database som lagrer passord, brukernavn og øvrig info om både brukere, organisasjoner og administrator. Figur~\ref{fig:databasemodell} viser en modell av informasjonen som lagres i databasen.
 
-Koblingene mellom tabellene viser til at hver organisasjon kan ha flere brukerprofiler tilknyttet seg, samtidig som hver bruker kan være tilknyttet flere organisasjoner. Hver bruker kan også være tilknyttet flere andre brukere.
+\subsection{Tekniske avhengigheter}
 
-Inkludert i systemet er et administratorpanel der så mye som mulig er automatisert i systemet, slik at det ikke trengs mer enn 5-10 minutter per uke med vedlikehold fra administrator sin side.
-\\
-\begin{figure}[H]
-\includegraphics[width=\textwidth]{Illustrasjoner/databasemodell-2.png}
-\caption{Databasemodell for lagring av informasjon for Administrator, Organisasjon og Brukerprofil}
-\label{fig:databasemodell}
-\end{figure}
+\paragraph{Feide og tilgang til studentinformasjon}
+Notater:
+Hvorfor bør tjenesten ha Feide?
+Samtale med Feide, virket ikke som en hindring.
+Fikk ikke svar fra IT-drift.
+Utfordring med sikkerhet, høgskolen er selv ansvarlig.
+Drøfting og vurdering av alternativer til Feide.
 
-\subsection{Feide og tilgang til studentinformasjon}
+\paragraph{Database}
+Siden systemet inkluderer innlogging og informasjon om organisasjoner fra andre kilder enn Brønnøysundregisteret vil det være behov for en database som kan lagre informasjon om både brukere, organisasjoner og administrator. Om Feide-innlogging implementeres og dette i tillegg kan brukes til å hente ut informasjon om studenten som logger inn fra HIØ sine datakilder, trengs ikke informasjon om studenter som passord, e-post og navn å lagres i systemets database. Om studenten velger å legge til ytterligere informasjon til profilen sin, som organisasjoner og aktiviteter den er interessert i, beskrivelse eller bosted, vil det være hensiktsmessig å kunne lagre dette i systemets database sammen med en ID knyttet opp mot studenten.
+
+\paragraph{Publiseringsløsning}
+Notater:
+Vurdere og drøfte ulike publiseringsløsninger: Wordpress eller lignende CMS, plugin eller nettsted, Vortex (HIØ sitt CMS), app, kode eget rammeverk.
+
+\subsection{Utvikling av tjenesten}
+Notater:
+Vurdering og drøfting av alternativer: bachelorprosjekt, masterprosjekt, outsourcing, delvis outsourcing, samarbeid med kommunen(e).
+Kan søke om midler til utvikling.
+
+\subsection{Drift av tjenesten}
+Notater: 
+Tar veldig mye tid å gjøre manuelt, 100 telefoner/mailer i måneden + fikse løpende hendelser
+Presenter flere aktuelle løsninger: webcrawler, egen stilling, halvautomatisering, outsourcing
 
 \subsection{Merkevarebygging og synliggjøring av produktet}
 
-Produktet blir laget i samkoordinering med Høgskolen i Østfold som et av deres bachelorprosjekter. Dette alene gir stor vekt blant aktører og organisasjoner som vil kunne være interessert i et slikt produkt, enda mer om Høgskolen i Østfold offentlig stiller seg bak produktet og bruker det som en del av sin hjemmeside.
+Prototypen til tjenesten Aktiv Student ble utformet på oppdrag fra HIØ som et av deres bachelorprosjekter. Dette alene kan styrke tjenestens troverdighet blant potensielle brukere og eventuelt andre interesserte aktører, enda mer om HIØ offentlig stiller seg bak tjenesten ved å for eksempel integrere det som en del av sin hjemmeside.
 
+\paragraph{Utfordringer}
 Utfordringen blir å skape et levende produkt, hvor organisasjoner legger inn egen informasjon og sørger for at ny og oppdatert informasjon blir lagt til kontinuerlig. Dette innebærer at det må være attraktivt for organisasjoner og legge til informasjon og oppdatere sine sider inne på plattformen.
 
-%større utfordring blir å få i gang plattformen med de første få brukerne%
+Stor utfordring blir å få i gang plattformen med de første få brukerne.
+
+Få brukere motivert til å logge inn/opprette brukerkonto og ikke bare passivt bruke tjenesten.
+
+Passe på at tjenesten ikke dør ut, kontinuerlig markedsføring, hvert nye studiekull, nye organisasjoner, oppdatert informasjon, drift, aktivitet i sosiale medier og på høgskolens nettside, skriv ned noen markedsføringsprinsipper for å sikre at brukere kommer tilbake og fortsetter å bruke tjenesten, og at nye brukere også kommer. Utfordring om studenter slutter på skolen men fortsatt står i listen over "interesserte studenter", kan ødelegge troverdigheten til denne funksjonen om folk ser at mange av de som står der ikke egentlig er med
 
 \paragraph{Hvordan kan dette løses?}
 
@@ -54,9 +72,17 @@ undersøkelsene våre viser at dette produktet er noe som må introduseres så t
 
 Markedsføringen opp mot organisasjoner i starten er en god del manuell jobb for administrator for dette produktet hvor administrator selv må sende ut invitasjoner og rekrutere organisasjoner til siden. Derfor er det viktig for utviklere og automatisere så mye av prosessen når det kommer til rekruttering som mulig. Men all jobben som legges ned i oppstarten av dette produktet vil være vel verdt det etterhvert når produktet blir mer kjent blant organisasjoner å de selv kommer til siden for å registrere seg. Etterhvert når merkevaren blir godt kjent og kanskje har spred seg ved å bli tilbudt eller tatt opp av andre instanser, håper vi at dette vil skape en type bevegelse blant organisasjoner i Norge hvor det å være en del av merkevaren "Aktiv Student" er attraktivt og hjelper til å berike organisasjons samfunnene og nærområdene rundt. Gruppens hovedtips for utviklere og administrator er å starte med studentorganisasjonene å få med alle disse så det vises at høgskolen stiller seg bak. Noe som kan hjelpe merkevarebyggningen kraftig er å presentere dette produktet for de forskjellige organisasjons forbundene i Norge å få dem ombord, så de kan markedsføre dette videre til sine organisasjoner. Prøv å skape media dekking rundt merkevaren for å introdusere dette til nærmiljøet. 
 
-\paragraph{Fremtidsplan for produktet}
+\subsection{Mulighet for utvidelse av tjenesten}
 
-Dette produktet blir bygget i hovedsak for HIØ. Men det betyr ikke at produktet kun begrenses til kommunene Fredrikstad, Sarpsborg og Halden. Informasjonen som hentes ut fra brreg.no dekker hele Norge. Det betyr at systemet har tilgang på all den informasjonen og ved noen enkle endringer på område parameterene i programmet til produktet kan det tilbys til for eksempel andre høyskoler, kommuner, fylker og interesserte parter. Det vil si at produktet kan da tilbys til andre nettsteder, som vil skape et større navn for vår merkevare. dette er med på å få de forskjellige organisasjonene til å se på det som attraktivt å legge inn sin informasjon som vil skape en god sirkel av merkevarebygging for alle parter.
+Som en del av oppdraget ble tjenesten utviklet i hovedsak for HIØ. Men etter oppdragsgivers ønske er også muligheter for utvidelse av tjenesten til bruk for andre aktører utforsket. Informasjonen om lag, foreninger og organisasjoner som ligger tilgjengelig på Brønnøysundregisterets API dekker hele Norge. Det betyr at systemet kan enkelt få tilgang på all denne informasjonen. Ved noen enkle endringer i parameterene i systemets kode kan tjenesten tilbys til for eksempel andre høyskoler, kommuner, fylkeskommuner og andre interesserte aktører. Ved bruk av aktører utenfor sektor for høyere utdanning vil Feide-innlogging måtte erstattes eller suppleres med andre løsninger, det vil være aktuelt å undersøke løsninger som for eksempel MinID \footnote{http://eid.difi.no/nb/minid} eller BankID \footnote{https://www.bankid.no/bedrift/}. Ved å tilby tjenesten til større aktører kan dette også bidra til å skape et større navn for tjenesten, som igjen kan bidra til å synliggjøre tjenesten og skape mer tillit overfor organisasjoner og privatbrukere, øke antall brukere og skape en god sirkel av merkevarebygging for alle parter.
+
+\paragraph{Løsninger for kommersialisering}
+Notater:
+Kommunen, kickstarter, søke bidrag for folkehelsefremmende/samfunnsbyggende arbeid, private investorer, andre utdanningsinstitusjoner. Hvordan får man hjulet til å rulle, få nok brukere slik at man vet at det fungerer før man selger det videre. Lisens på 50k i året, ha en 50-100\% stilling på drift.
+
+\paragraph{Markedsføring opp mot potensielle kunder eller investorer}
+Notater:
+Folkehelse, mer effektiv i arbeid, samfunnsbygging, tilhørighet til kommunene, studenter melder flytting, bryr seg mer om stedet de bor og bidrar i samfunnet, frivillighet får alt til å gå rundt, kompetansetilflyttere får tilknytning og blir
 
 
 \section{Konklusjon og oppsummering}
