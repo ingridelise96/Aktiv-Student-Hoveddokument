@@ -38,9 +38,6 @@ Den endelige skissen av siden for søkeresultater vises i figur~\ref{fig:3-3-res
 
 \newpage
 \subsection{Navigasjon}
-%Notater:
-%Skriv om logikken i navigasjon fra kategori til underkategori til resultater.
-%Bruk figur av forside med utbrettsmeny som eksempel. Dra inn begreper fra IA for navigasjon er sentralt der. Skriv om bruk av ikoner og bilder som visuelle virkemidler og hensikten med det (spennende, uformelt, lekent, blikkfang, gir et bedre inntrykk av innholdet på sidene man kommer til). Skriv om nav-bar i toppen, den tar ikke opp unødvendig plass, så mye luft på siden som mulig for lett og minimalistisk design, slik som nevnt i brukerintervjuer. Kanskje relevant å lage et revidert sitemap for å vise navigasjon mellom endelige skisser?
 
 Fundamentet til nettsiden Aktiv Student er bygget opp rundt databasen til Brønnøysundregisteret sin oversikt over fritidsorganisasjoner i Norge. Det kan dermed føre til en rekke utfordringer å presentere alt av nødvendig informasjon, noe som igjen kan medføre en risiko for å gi besøkende for mye innhold å se på til enhver tid.
 \vspace{5mm}
@@ -234,70 +231,78 @@ Administratorpanel
 \end{center}
 
 \subsection{Resultat i forhold til brukerens kravspesifikasjon}
-Notater:
-% Må gås gjennom punkt for punkt og vise til hva vi har gjort i designet for å oppfylle kravet %
-\subsubsection{Tjenestens innhold}
-\fet{Det skal være enkelt å finne oversikt over tilgjengelige aktiviteter}
-Tiltak: kategorier, underkategorier, kartleggingstest, mest populære
 
-\fet{Det skal være enkelt å søke på og finne fram til en spesifikk aktivitet}
-Tiltak: søkefelt, kategorier, søkealgoritmer
+\subsubsection{Tjenestens innhold}
+
+\fet{Det skal være enkelt å finne oversikt over tilgjengelige aktiviteter}
+
+Antall hovedkategorier har blitt kortet ned fra de 14 funnet på brreg.no ned til 12. Disse 12 har blitt testet for forståelse og synlighet, og implementert deretter. Kategoriene presenteres som symboler som vises prominent frem på forsiden til Aktiv Student. Klikk på de viser underkategorier til valgt kategori samt de mest populære lokale organisasjonene som driver med det. To klikk fra forsiden vil derfor fremvise nytteverdig informasjon for besøkende. 
+
+En kartleggingstest er også utviklet for å kategorisere brukeren selv sine behov og ønsker, ved tilfelle at de trenger en pekepinn for å finne aktuelle aktiviteter.
+
+\fet{Det skal være enkelt å søke på og finne frem til en spesifikk aktivitet}
+
+Et søkefelt vil ligge synlig og dominerende på forside. Herfra kan man søke på alt fra kategorier til navn på foreninger, lag og organisasjoner. Dette dominerende søkefeltet vil også finnes på "Søkeresultater og filtrering", en dedikert landingsside for å filtrere søk etter underkategorier, område og aktuelle ukedager. Foruten disse vil søkefeltet finnes på toppen av hver side i navigasjonsmenyen.
 
 \fet{Systemet skal hjelpe brukeren å finne potensielle aktiviteter som passer for den}
-Tiltak: kartleggingstest, mest populære, se profil til interessert bruker og brukerens likte organisasjoner
 
-\fet{Informasjonen skal være oppdatert og korrekt}
-Tiltak: la til rette for at organisasjoner selv kunne legge til oppdatert og riktig info, annet enn det kan vi bare gi anbefalinger på
+En kartleggingstest er utviklet og tilgjengelig fra forsiden på tjenesten. Ved å oppfordre bruker til å bruke få minutter på denne, kan bruker få fremlagt en rekke aktiviteter som kan være aktuelle og interessante.
 
-\fet{Det skal være relevant og utfyllende informasjon om aktivitetene}
-Tiltak: feltene på org.side er utfyllende og relevant, progress-bar, resten kan vi bare gi anbefalinger på
+På de øvrige organisasjonssidene kan man se hvor mange andre studenter som er interessert, og man kan kan klikke på de forskjellige for å se hva de igjen er interessert i av organisasjoner. Formålet med dette er å indirekte fremlegge for brukere hva annet av aktiviteter de kan vise interesse for.
 
-\fet{Det skal være enkelt å komme i kontakt med organisasjoner}
-Tiltak: chat, kontaktinfo tydelig
+\fet{Informasjonen skal være oppdatert og korrekt} og \fet{Det skal være relevant og utfyllende informasjon om aktivitetene}
+Brukerprofilene til organisasjoner består av en viss mengde ferdigutfylt info som blir hentet fra brreg.no sin database. I tillegg oppfordres organisasjoner til å føre inn informasjon som er både inviterende og relevant for studenter. Kontaktpersoner, kontaktinfo, webadresser og møtetider er noen av de mest aktuelle.
 
-\fet{Det skal være lav terskel for å komme i kontakt med organisasjoner}
-Tiltak: uforpliktende, trenger ikke å tenke så mye på formulering og språk i chat som i mail/telefon, de kan svare når de har mulighet, føler ikke at man plager dem, kan også kontakte gruppen om man lurer på noe
+Oppfordringen for å føre inn slik informasjon vises iform av en fremdriftslinje (progress bar) på profilen til organisasjonen. Dette er ment som et insentiv for å engasjere organisasjonene til å skrive.
 
-\fet{Det skal være enkelt å ta kontakt med andre brukere}
-Tiltak: gruppechat, se profil
+\fet{Det skal være enkelt å komme i kontakt med andre brukere og organisasjoner}
+Aktiv Student kan senke terskelen for kontakt mellom studenter og organisasjoner ved å introdusere en chat-funksjon. Denne funksjonen er tilgjengelig for innloggede brukere, og fungerer slik at bruker melder interesse for en organisasjon, for så å få tilgang til chatten. Her kan alle som også har vist interesse for organisasjonen delta, og organisasjonens kontaktperson oppfordres til å være delaktiv.
 
-\fet{Det skal være lav terskel for å ta kontakt med andre brukere}
-Tiltak: trenger ikke sende venneforespørsel, kan gradvis øke kontakten i gruppechatten, kontaktperson starter samtalen i gruppechat 
+Her vil det være uforpliktende å snakke sammen. Brukere kan svare når de vil eller har mulighet. Stresset som noen kan føle på ved å ringe foreninger eller ukjente mennesker vil forsvinne.
+
+\fet{Det skal være lav terskel for å ta kontakt med andre brukere og organisasjoner}
+Tjenesten Aktiv Student benytter seg ikke av venneforespørsler. Det er meningen at man heller kan prate med likesinnede i chatten til de respektive organisasjonene. Dette kan medføre til gode samtaler og økt kontakt blant de som ønsker det. Det oppfordres til at organisasjonene selv tar den første kontakten i chatten.
 
 \fet{Systemet skal fasilitere for at brukere kan delta på aktiviteter sammen}
-Tiltak: gruppechat, avtale samkjøring, se profil med interesser og organisasjoner, se skolemailen på profil
+Tjenesten legger til rette for at brukere med felles interesser kan prate sammen. Medlemmer av organisasjonen kan for eksempel avtale aktiviteter og samkjøring sammen. Synlig navn og e-post vil gjøre kommunikasjon og planlegging enklere for deltakere.
 
 \fet{Systemet skal være spennende og attraktivt å bruke}
-kartleggingstest, kult design, chat, mest populære aktiviteter, inviterende tone på innhold
 
+Det er lagt vekt på at tjenesten og nettsiden den befinner seg på skal inneha en hyggelig og inviterende tone. Dette utføres ved hjelp av hyggelig ordlegging i tekst, duse farger, bruk av bilder og symboler.
+
+Kartleggingstesten er en funksjon som kan engasjere besøkende til å utforske potensielle aktiviteter skreddersydd for dem.
+
+En prat med likesinnede er målet bak en chat-funksjon som kun eksisterer inne på en organisasjon sin profilside.
 
 \subsubsection{Teknisk funksjonalitet}
 \fet{Det skal gå an å filtrere søk på relevante kriterier}
-Tiltak: filtreringsboks
+Det ble gjort en undersøkelse på lesbarhet og forståelighet rundt betegnelsene som finnes på brreg.no per i dag. De forbedrede termene vil bli brukt som valgmuligheter ved et søk og filtreringsside som tjenesten tilbyr.
 
 \fet{Tjenesten skal være intuitiv og gjenkjennelig}
 Tiltak: samme type design på flere sider, brukt forståelig språk og symboler, beskrivende tekster
 
-\fet{Designet skal være minimalistisk}
-Tiltak: mellomrom mellom elementer, minst mulig ting på sidene, minst mulig tekst
+Utseende på tjenesten vil forbli lik på alle landingssider, gjenkjennbare symboler vil pryde forside og kategorioverskrifter. Dette for å gjøre brukere visuelt kjent med tjenesten. Beskrivende tekster vil medføre til økt forståelse på hva tjenesten tilbyr.
 
-\fet{Det skal være enkelt å finne fram dit man skal i tjenesten}
-Tiltak: navigasjon(Stefan), minimalisme
+\fet{Designet skal være minimalistisk}
+Prototypen inneholder mye tomrom mellom elementer og ingen overflødige elementer på landingssidene. Velvalgte ord resulterer i kortfattede og informasjonsrike informasjontekster.
+
+\fet{Det skal være enkelt å finne frem dit man skal i tjenesten}
+Navigasjonen på prototypen er utviklet for besøkende å bruke minst mulig klikk for å komme dit de vil. Dette er forsterket fra forsiden og ut til de øvrige sidene. Det tar eksempelvis to klikk for bruker å finne en relevant aktivitet for dem fra forsiden.
 
 \fet{Innholdet som vises skal være kun det nødvendige}
-Tiltak: ingen blokker med tekst (unntatt om oss), fjernet alt unødvendig, utbrettsmenyer som skjuler innhold
+Tjenesten fremlegger informasjon ettersom hva bruker gjør i form av utbrettsmenyer ved klikk. Kun mest nødvendig informasjon vil vises til enhver tid.
 
 \fet{Tjenesten skal ikke inneholde forstyrrende funksjoner eller designmomenter}
-Tiltak: jobbet med å integrere og plassere ting der de passer inn f.eks kartleggingsknappen på forsiden, har satt tilside fancy grafikk for de mest logiske løsningene for brukere f.eks. kalendervisning av møtedager
+Avgjørelser ble tatt som omhandlet hvordan å integrere og plassere elementer og funksjoner der de føltes mest naturlig. Prosjektteamet skrapet ting som ikke fungerte, slik som eksempelvis hele konseptet rundt aktivitetsvenn.
 
 \fet{Fargepaletten skal være enkel og minimal}
-Tiltak: valgte to farger og holdt oss til dem + bakgrunnsfarge
+Det ble brukt noe tid på utforske fargebruk til prototypen. Vi endte opp med å bruke to duse nyanser av forholdsvis lys rosa og mørk grønn.
 
 \fet{Menyen skal kun inneholde det nødvendige}
-Tiltak: liten meny med ingen undermenyer og kun tre valg (Stefan)
+Øverst på siden finner man menyen. I venstre hjørne er ligger en hjem-knapp i form av Aktiv Student logo. Ut ifra logoen følger en klikkbar breadcrumb-sti som viser hvor besøkende befinner seg til enhver tid. Et søkefelt blir liggende til venstre for lenker til {\em Om oss, Student login} og {\em For Organisasjon}.
 
 \fet{Søkefeltet skal være synlig og lett tilgjengelig}
-Tiltak: Stort søkefelt på forsiden og resultatsiden, ellers er det alltid i nav-baren
+På landingssidene {\em Forside} og {\em Søkeresultater} finner man søkefeltet fremtredende midt på siden. På de øvrige sidene vil den bli lagt til venstre for lenkene i navigeringsmenyen øverst på siden man er på.
 
 
 \section{Resultater fra undersøkelse av hypoteser}
@@ -318,17 +323,17 @@ Dette ble gitt videre støtte av fagperson Anders Midtsundstad, som har utviklet
 Intervjuet med kvinnen som jobber i NAV indikerer mye av det samme. Kvinnen sa i intervjuet at \say{det kan virke som mange må ha noen som kan fysisk følge dem til arrangementer, ei hånd å holde i. Det hjelper ikke hvor mange tilbud man får når man er alene} \cite{NAV-INTERVJU:16}. Her var altså hjelp fra et mellomledd og deltakelse sammen med noen andre sentralt for at personene skulle tørre å dra på arrangementer. 
 
 \paragraph{Konklusjon av undersøkelse av hypotese 1}
-Etter undersøkelse av hypotese 1 kom prosjektgruppen fram til at ved å tilrettelegge i tjenesten for å delta sammen med andre eller å bli invitert til å delta av et mellomledd er det sannsynlig at dette kan føre til at studenter blir mer motivert til å delta. Gjennom at det sosiale og menneskelige aspektet ved tjenesten blir gjort tydelig kan studenten få større tillit til organisasjonen \cite{MIDTSUNDSTAD-EPOST:14}. Uten å utvikle tjenesten og teste denne i bruk er det dog umulig å si sikkert om tjenesten faktisk vil senke terskelen for å delta på aktiviteter, men prosjektgruppens funn styrker hypotese 1.
+Etter undersøkelse av hypotese 1 kom prosjektgruppen frem til at ved å tilrettelegge i tjenesten for å delta sammen med andre eller å bli invitert til å delta av et mellomledd er det sannsynlig at dette kan føre til at studenter blir mer motivert til å delta. Gjennom at det sosiale og menneskelige aspektet ved tjenesten blir gjort tydelig kan studenten få større tillit til organisasjonen \cite{MIDTSUNDSTAD-EPOST:14}. Uten å utvikle tjenesten og teste denne i bruk er det dog umulig å si sikkert om tjenesten faktisk vil senke terskelen for å delta på aktiviteter, men prosjektgruppens funn styrker hypotese 1.
 
 \subsection{H2: Studenter ved HIØ syns det er vanskelig å finne en oversikt over aktivitetstilbud}
 
 \paragraph{Brukerintervjuer}
-Svar fra de initielle brukerintervjuene støttet opp under hypotese 2. 6/8 deltakere svarte at å få bedre oversikt og tilgang til aktivitetstilbud ville gjøre det enklere for dem å delta på en aktivitet. Det som samtidig ble nevnt var vanskeligheten med å finne fram til kontaktinformasjon eller informasjon om hvordan man kunne delta på en aktivitet. 7/8 deltakere svarte at lett tilgjengelig kontaktinformasjon til organisasjoner spilte en viktig rolle i om de ville ta kontakt eller ikke. I tillegg svarte 8/8 deltakere at de ville tatt kontakt med en interessant organisasjon om det hadde eksistert gode tjenester som gjorde det enkelt å ta kontakt.
+Svar fra de initielle brukerintervjuene støttet opp under hypotese 2. 6/8 deltakere svarte at å få bedre oversikt og tilgang til aktivitetstilbud ville gjøre det enklere for dem å delta på en aktivitet. Det som samtidig ble nevnt var vanskeligheten med å finne frem til kontaktinformasjon eller informasjon om hvordan man kunne delta på en aktivitet. 7/8 deltakere svarte at lett tilgjengelig kontaktinformasjon til organisasjoner spilte en viktig rolle i om de ville ta kontakt eller ikke. I tillegg svarte 8/8 deltakere at de ville tatt kontakt med en interessant organisasjon om det hadde eksistert gode tjenester som gjorde det enkelt å ta kontakt.
 
-Deltakerne som ikke hadde deltatt på en organisert fritidsaktivitet i løpet av studietiden ble spurt om hva som holdt dem fra å delta. Én deltaker svarte \say{det er for dårlig tilbud. Jeg har sjekket tilbudet til HSS men ingenting der fenger.} En annen deltaker sa at han \say{vet ikke hva som er tilgjengelig og da gidder jeg ikke å begynne å lete.} Det ble også nevnt av flere deltakere at det var viktig for dem å ha lett tilgang til god og oppdatert informasjon om organisasjonene, ettersom flere av deltakerne heller ville lest om dem og møtt direkte opp på møte enn å tatt kontakt med organsasjonen først.
+Deltakerne som ikke hadde deltatt på en organisert fritidsaktivitet i løpet av studietiden ble spurt om hva som holdt dem fra å delta. Én deltaker svarte \say{det er for dårlig tilbud. Jeg har sjekket tilbudet til HSS men ingenting der fenger.} En annen deltaker sa at han \say{vet ikke hva som er tilgjengelig og da gidder jeg ikke å begynne å lete.} Det ble også nevnt av flere deltakere at det var viktig for dem å ha lett tilgang til god og oppdatert informasjon om organisasjonene, ettersom flere av deltakerne heller ville lest om dem og møtt direkte opp på møte enn å tatt kontakt med organisasjonen først.
 
 \paragraph{Mangler ved dagens aktivitetstilbud}
-I alle rundene med brukerundersøkelser som ble gjennomført ble deltakerne spurt om sine tanker om konseptet Aktiv Student. Svarene som kom fram pekte på en mangel på et oversiktlig aktivitetstilbud for studenter ved HIØ i dag. I førsteinntykkstesten av skisser 1.0 sa en deltaker at han \say{liker konseptet, det er mangel på dette i dag og studenter ved høgskolen trenger det}. I brukertesten av skisser 2.0 ble en ny gruppe med deltakere spurt samme spørsmål. Det ble sagt av en deltaker at plattformen \say{svarer på et eksisterende behov ved høgskolen.} En annen deltaker sa at han ville brukt plattformen fordi \say{informasjon om organisasjoner på HIØ i dag er overfladisk og spredt overalt}.
+I alle rundene med brukerundersøkelser som ble gjennomført ble deltakerne spurt om sine tanker om konseptet Aktiv Student. Svarene som kom frem pekte på en mangel på et oversiktlig aktivitetstilbud for studenter ved HIØ i dag. I førsteinntykkstesten av skisser 1.0 sa en deltaker at han \say{liker konseptet, det er mangel på dette i dag og studenter ved høgskolen trenger det}. I brukertesten av skisser 2.0 ble en ny gruppe med deltakere spurt samme spørsmål. Det ble sagt av en deltaker at plattformen \say{svarer på et eksisterende behov ved høgskolen.} En annen deltaker sa at han ville brukt plattformen fordi \say{informasjon om organisasjoner på HIØ i dag er overfladisk og spredt overalt}.
 
 Et viktig element i alle brukerundersøkelsene var at deltakerne skulle kunne snakke fritt og med så få føringer fra prosjektgruppen som mulig. Problemene med aktivitetstilbudet ble følgelig tatt opp på eget initiativ av studentene som deltok i undersøkelsene. Av mange deltakere ble denne problemstillingen også nevnt som første tema i samtalene om fritidsaktivitetstilbudet for studenter ved HIØ.
 
@@ -343,7 +348,7 @@ Svar fra de initielle brukerintervjuene ga blandende tilbakemeldinger. 6/8 delta
 \paragraph{Fagpersoner og forskning}
 I intervjuet med kvinnen som jobbet med sosialhjelp i NAV ble det tatt opp flere punkter som var relevante for hypotese 3. Det ble tatt opp at flere av NAV-brukerne syntes det generelt var vanskelig å initiere kontakt, også med personer som jobbet i NAV. Hun opplevde ofte at hun måtte ta den første kontakten med brukerne fordi mange hadde {\em telefon-angst} og slet med å ta kontakt selv \cite{NAV-INTERVJU:16}.
 
-Funn fra forskningsartikkelen {\em To Go or not to Go!: What Influences Newcomers of Hybrid Communities to Participate Offline} indikerte at en av årsakene til at brukere av tjenesten Meetup \footnote{https://www.meetup.com/} valgte å ikke delta på en aktivitet kunne være den sosiale distansen mellom aktivitetens vert og brukeren. Undersøkelsene i artikkelen kom blant annet fram til at om verten var en erfaren bruker av tjenesten var det mindre sjanse for at en nykommer ville delta på arrangementet. \say{Host tenure was represented as the log of number of days since joining the group; i.e. about 3 (2.7) extra days of group membership for event host in the group results to a decrease of 23\% in likelihood of a newcomer choosing the event as their first one to attend.}. En av anbefalingene nevnt i artikkelen for å motvirke brukerens følelse av sosial avstand var å tilby brukeren direkte kontakt med aktivitetens vert i tjenesten. \cite{NEWCOMERS:4:CT17}
+Funn fra forskningsartikkelen {\em To Go or not to Go!: What Influences Newcomers of Hybrid Communities to Participate Offline} indikerte at en av årsakene til at brukere av tjenesten Meetup \footnote{https://www.meetup.com/} valgte å ikke delta på en aktivitet kunne være den sosiale distansen mellom aktivitetens vert og brukeren. Undersøkelsene i artikkelen kom blant annet frem til at om verten var en erfaren bruker av tjenesten var det mindre sjanse for at en nykommer ville delta på arrangementet. \say{Host tenure was represented as the log of number of days since joining the group; i.e. about 3 (2.7) extra days of group membership for event host in the group results to a decrease of 23\% in likelihood of a newcomer choosing the event as their first one to attend.}. En av anbefalingene nevnt i artikkelen for å motvirke brukerens følelse av sosial avstand var å tilby brukeren direkte kontakt med aktivitetens vert i tjenesten. \cite{NEWCOMERS:4:CT17}
 
 \paragraph{Konklusjon av undersøkelse av hypotese 3}
 Undersøkelsene av hypotese 3 pekte mot to forskjellige årsaker til at personer valgte å ikke ta kontakt med en organisasjon. En mulig årsak kunne være både at terskelen av ulike grunner var for høy, slik intervjuet med kvinnen fra NAV og funn fra forskningsartikkelen indikerte. En annen mulig årsak kunne være at de ikke så hensikten med å ta kontakt når de heller kunne møte opp direkte på møtet, som funn fra initielle brukerintervjuer indikerte. Prosjektgruppen valgte derfor å designe funksjonalitet med hensyn til begge disse mulige årsakene. Ettersom årsaken til at studenter ikke ville ta kontakt med organisasjoner var uklar og testgruppen samtidig var for liten for å trekke konklusjoner førte undersøkelsene til at hypotese 3 ble svekket. Fokuset ble skiftet fra {\em kontakt-aspektet} til å {\em legge til rette for at studenter skulle ha en mulighet til å enkelt og med lav terskel delta i organisasjoner.}
@@ -352,13 +357,13 @@ Undersøkelsene av hypotese 3 pekte mot to forskjellige årsaker til at personer
 \subsection{H4: Spennende funksjoner og godt design skaper en tjeneste som studenter ved HIØ vil bruke}
 
 \paragraph{Brukerintervjuer}
-I de initielle brukerintervjuene ble deltakerne stilt forskjellige spørsmål om teknisk utforming og funksjonalitet i tjenesten Aktiv Student og generelt i nettbaserte tjenester. Ikke overraskende svarte 8/8 deltakere at gode og spennende funksjoner og design var en viktig faktor for dem i en tjeneste de skulle bruke. Deltakerne dro fram forskjellige konkrete funksjoner som var viktige for dem, de mest sentrale var {\em en velfungerende søkemotor} og {\em logisk fremstilling av kategorier}. Blant designaspekter som ble tatt opp var {\em minimalistisk design} og {\em kortfattet informasjon} de som ble nevnt som de viktigste av deltakerne. Alle disse aspektene kunne oppsummeres med at studentene ønsket at det skulle være enkelt å finne fram til resultatene man lette etter uten unødvendig bakgrunnsstøy.
+I de initielle brukerintervjuene ble deltakerne stilt forskjellige spørsmål om teknisk utforming og funksjonalitet i tjenesten Aktiv Student og generelt i nettbaserte tjenester. Ikke overraskende svarte 8/8 deltakere at gode og spennende funksjoner og design var en viktig faktor for dem i en tjeneste de skulle bruke. Deltakerne dro frem forskjellige konkrete funksjoner som var viktige for dem, de mest sentrale var {\em en velfungerende søkemotor} og {\em logisk fremstilling av kategorier}. Blant designaspekter som ble tatt opp var {\em minimalistisk design} og {\em kortfattet informasjon} de som ble nevnt som de viktigste av deltakerne. Alle disse aspektene kunne oppsummeres med at studentene ønsket at det skulle være enkelt å finne frem til resultatene man lette etter uten unødvendig bakgrunnsstøy.
 
 \paragraph{Brukertest av skisser}
 I løpet av brukertesting av skissene beskrevet i delkapittel~\ref{section:Moderert brukertest-skisser-1} og~\ref{section:brukertest-skisser2.0} delte deltakere sin mening om tjenestens funksjoner. I brukertest av skisser 1.0 sa en av deltakerne om den utbedrede versjonen av kartleggingstesten \say{den gjør plattformen mer spennende og er helt nødvendig for at ikke plattformen kun blir et register}. Et flertall av deltakerne i denne brukertesten svarte at de ville tatt kartleggingstesten som første handling i tjenesten om den hadde vært ferdig utviklet. I brukertestene av skisser 1.0 og skisser 2.0 handlet de fleste av tilbakemeldingene om design og utforming. Plassering av elementer, tydeliggjøring av beskrivelser og mengden innhold på siden var områder som fikk mange tilbakemeldinger. Dette indikerte at godt design og utforming var viktig for studentene som deltok.
 
 \paragraph{Designprinsipper og retningslinjer fra faglitteratur}
-I boken {\em Designing for User Engagement on the Web: 10 Basic Principles} skrev forfatteren om hvilke designprinsipper som kunne benyttes for å skape en engasjerende brukeropplevelse i en nettbasert tjeneste. I boken ble interaksjon trukket fram som et viktig prinsipp: \say{People want to be active participants in communication, not just passive receivers of information.} \cite[71]{ENGAGEMENT-WEB:17}. I tillegg ble det gitt anbefalinger for økt brukervennlighet som gjenkjennelig design, lettleselig innhold og bruk av visuelle virkemidler som bilder og fonter for at brukeren skulle enkelt kunne finne ut hvilket innhold som var viktig for den \cite[31]{ENGAGEMENT-WEB:17}. 
+I boken {\em Designing for User Engagement on the Web: 10 Basic Principles} skrev forfatteren om hvilke designprinsipper som kunne benyttes for å skape en engasjerende brukeropplevelse i en nettbasert tjeneste. I boken ble interaksjon trukket frem som et viktig prinsipp: \say{People want to be active participants in communication, not just passive receivers of information.} \cite[71]{ENGAGEMENT-WEB:17}. I tillegg ble det gitt anbefalinger for økt brukervennlighet som gjenkjennelig design, lettleselig innhold og bruk av visuelle virkemidler som bilder og fonter for at brukeren skulle enkelt kunne finne ut hvilket innhold som var viktig for den \cite[31]{ENGAGEMENT-WEB:17}. 
 
 Boken {\em Successful User Experience: Strategies and Roadmaps} nevner kreativitet og innovasjon som viktige verktøy når det kom til å løse en brukers problem. Forfatteren skriver at for å finne innovative løsninger i design av brukeropplevelser må man tenke utenfor boksen \cite[29]{SUCCESSFUL-UX:18}. Forfatteren av boken {\em Interactive Design : An Introduction to the Theory and Application of User-centered Design} skrev om hvordan underholdende og morsom funksjonalitet kunne engasjere brukeren og at prinsipper fra spill og lek kunne inkorporeres i oppgaver som vanligvis ville vært kjedelig å utføre: \say{Users are engaged through entertainment. the more pleasure a user gets from interacting with what you’ve designed, the more engaged they will be and the more likely they will be to return.[...] Good design itself can be pleasurable.} \cite[123]{INTERACTIVE-DESIGN:19}.
 
@@ -368,6 +373,8 @@ Selv om antakelsen om at brukere av en tjeneste ønsket spennende funksjonalitet
 
 \section{Vurderinger}
 %Hva ville vi få ut av vurderingen? Skriv litt om hensikten med vurderingene. Få input på om målgruppen og fagpersoner trodde det var håp for produktet. Tips til videre utvikling og markedsføring%
+
+Det vi ville få ut av denne vurderingen var input og tanker rundt konseptet fra målgruppen og fagpersoner og tips om hvordan konseptet kunne videreutvikles, markedsføres og presenteres på best mulig måte.
 
 \subsection{Studenters vurdering av konseptet}
 Elleve nåværende eller tidligere studenter deltok i vurderingen av den ferdige prototypen og konseptet. Åtte av disse var nåværende studenter, derav syv studerte ved HIØ og én ved Universitetet i Sørøst-Norge. Av de tre som ikke var nåværende studenter hadde alle studert tidligere og to av disse planla å begynne å studere igjen i løpet av året. Innenfor deltakernes respektive studieprogram var to førsteårstudenter, tre andreårstudenter og to tredjeårstudenter. Én deltaker var nettstudent.
@@ -379,7 +386,7 @@ Vurderingen ble gjennomført individuelt av deltakerne enten muntlig ved personl
 %Spørsmål stilt til studenter%
 \subsubsection{Finner du konseptet bak prototypen interessant og brukbart og er dette noe du ville selv brukt?}
 %oppsummering av svar fra alle%
-Deltakerene syntes at konseptet hørtes interessant ut og tror det kunne vært nyttig for mange studenter. De fleste deltakerene ville prøvd plattformen om det hadde vært tilgjengelig på deres studiested, mens en deltakere var litt usikker på om de ville brukt plattformen. Noen av deltakerne påpekte at selv om de syntes det var et bra konsept så ville de personlig ikke brukt det i situasjonen de var i fordi de allerede var etablert og allerede hadde nok å gjøre på fritiden. De ville derimot ha brukt det da de var nye studenter og hadde et større behov for å finne aktiviteter og bygge nettverk. Aspekter trekt fram av deltakere som gjorde konseptet interessant var blant annet \say{det samler alt på ett sted}, \say{det åpner dører og gjør det lettere å finne interessante aktiviteter} og \say{det kan åpne horisonten for andre aktiviteter som man ellers ikke ville funnet fram til}.
+Deltakerene syntes at konseptet hørtes interessant ut og tror det kunne vært nyttig for mange studenter. De fleste deltakerene ville prøvd plattformen om det hadde vært tilgjengelig på deres studiested, mens en deltakere var litt usikker på om de ville brukt plattformen. Noen av deltakerne påpekte at selv om de syntes det var et bra konsept så ville de personlig ikke brukt det i situasjonen de var i fordi de allerede var etablert og allerede hadde nok å gjøre på fritiden. De ville derimot ha brukt det da de var nye studenter og hadde et større behov for å finne aktiviteter og bygge nettverk. Andre så nytteverdien i tjenesten da de synes det er vanskelig å ta kontakt med folk når man har vært vekk fra studietiden og ellers etablert. Aspekter trekt frem av deltakere som gjorde konseptet interessant var blant annet \say{det samler alt på ett sted}, \say{det åpner dører og gjør det lettere å finne interessante aktiviteter} og \say{det kan åpne horisonten for andre aktiviteter som man ellers ikke ville funnet frem til}.
 %bare gjør om for det som må endres så det passer til deres svar også.%
 
 \subsubsection{Hvordan ser du for deg at konseptet ville fungert i praksis?}
@@ -430,10 +437,10 @@ Deltaker 3
 
 Deltaker 4
 
-\paragraph{1. Ville du/din organisasjon brukt denne tjenesten for å øke deres synlighet blant studenter? Hvorfor/hvorfor ikke?}
+\subsubsection{}{1. Ville du/din organisasjon brukt denne tjenesten for å øke deres synlighet blant studenter? Hvorfor/hvorfor ikke?}
 Organisasjonene sa at dette er noe de ville brukt for å styrke sin synlighet utad. Dette ville også hjelpe dem å knytte en ny type kontakt med studenter og en ny type brukergruppe.
 
-\paragraph{2. Hvordan ser du for deg at denne tjenesten fungerer i praksis?}
+\subsubsection{}{2. Hvordan ser du for deg at denne tjenesten fungerer i praksis?}
 {\bf a. ville det blitt brukt?}
 
 Organisasjonene sier at de tror det vil bli brukt, men at det må markedsføres godt.
@@ -446,7 +453,7 @@ Ja sier organisasjonene.
 
 Organisasjonene mener at dette ser ut som en tilfredstillende og godt utviklet tjeneste så det ville blitt brukt til sin hensikt.
 
-\paragraph{3. Har du noen tanker om samfunnsverdien og nytten av denne tjenesten i lokalsamfunnet i forhold til:}
+\subsubsection{}{3. Har du noen tanker om samfunnsverdien og nytten av denne tjenesten i lokalsamfunnet i forhold til:}
 {\bf a. Relasjon mellom studenter og fastboende i kommunen}
 
 Organisasjonene mente at tjenesten kan skape kontakter som gjør at når studentene er ferdig vil bli værende i kommunen og gi videre tilbud, knytte kontakter personlig og profesjonelt som gjør at studenter kanskje velger å bli værende i byen etter endt studietid.
@@ -459,30 +466,30 @@ Organisasjonene mente at tjenesten kan skape kontakter som gjør at når student
 
 Organisasjonene sier at det kan hjelpe i noen tilfeller og samtidig dempe presset når det kommer til festing men gir et annet type tilbud for studenter.
 
-\paragraph{4. Har du noen ideér til hvordan tjenesten kunne blitt synliggjort og markedsført opp mot organisasjoner, lag og foreninger slik at de vil få lyst til å opprette organisasjonsprofil?}
+\subsubsection{}{4. Har du noen ideér til hvordan tjenesten kunne blitt synliggjort og markedsført opp mot organisasjoner, lag og foreninger slik at de vil få lyst til å opprette organisasjonsprofil?}
 Et supert tips som gruppen fikk var å bruke organisasjons forbundene til å markedsføre.
 
-\paragraph{5. Er det noe du ville endret med konseptet eller måten det fungerer på?}
+\subsubsection{}{5. Er det noe du ville endret med konseptet eller måten det fungerer på?}
 
 Nei
 
-\paragraph{6. Har du noen andre tanker om prototypen eller konseptet du føler er relevant å ta med?}
+\subsubsection{}{6. Har du noen andre tanker om prototypen eller konseptet du føler er relevant å ta med?}
 
 
 \subsection{Vurdering av konseptet fra aktører innen frivillighet og samfunnsutvikling}
-To personer som jobbet innenfor områder som var relevante for prosjektet ble kontaktet og spurt om å delta i en samtale rundt prosjektets samfunnsmessige rammer og gjøre en vurdering av konseptet: Gina Finsrud i Halden Kommune og Wenche Eriksen fra Halden Frivilligsentral. Samtalen med Gina Finsrud ble gjennomført over telefon. Samtalen med Wenche Eriksen ble gjennomført gjennom et møte med et medlem av prosjektgruppen, fra Frivilligsentralen deltok også prosjektmedarbeider Catharina Heide Amundsen og frivillig Marie Holmgaard Martinsen på møtet, de bidro også i vurderingen.
+To personer som jobbet innenfor områder som var relevante for prosjektet ble kontaktet og spurt om å delta i en samtale rundt prosjektets samfunnsmessige rammer og gjøre en vurdering av konseptet: Gina Finsrud i Halden Kommune og Wenche Erichsen fra Halden Frivilligsentral. Samtalen med Gina Finsrud ble gjennomført over telefon. Samtalen med Wenche Erichsen ble gjennomført gjennom et møte med et medlem av prosjektgruppen, fra Frivilligsentralen deltok også prosjektmedarbeider Catharina Heide Amundsen og frivillig Marie Holmgaard Martinsen på møtet, de bidro også i vurderingen.
 
-Wenche Eriksen er leder i Halden Frivilligsentral og jobber med daglig drift, koordinering av frivillige og etablering og oppfølging av grupper. Hun jobber også med publisering av informasjon om Frivilligsentralens arrangementer og fremming av Frivilligsentralen som et møtested for alle. \cite{FRIVILLIGSENTRALEN-INTERVJU:21} 
+Wenche Erichsen er leder i Halden Frivilligsentral og jobber med daglig drift, koordinering av frivillige og etablering og oppfølging av grupper. Hun jobber også med publisering av informasjon om Frivilligsentralens arrangementer og fremming av Frivilligsentralen som et møtested for alle. \cite{FRIVILLIGSENTRALEN-INTERVJU:21} 
 
-Gina Finsrud er ansatt ved avdeling for samfunnsutvikling i Halden Kommune og jobber blant annet opp mot politikere og i forskjellige prosjekter med næringsutvikling i Haldensamfunnet. Hun har sammen med høgskoledirektør ved HIØ jobbet med et prosjekt for å få studenter til å i boende i Halden etter endt studie, hun har også jobbet i et prosjekt for kompetansetilflytting sammen med prosjektgruppens oppdragsgiver Tommy Payne. \cite{KOMMUNEN-INTERVJU:20} 
+Gina Finsrud er ansatt ved avdeling for samfunnsutvikling i Halden Kommune og jobber blant annet opp mot politikere og i forskjellige prosjekter med næringsutvikling i Haldensamfunnet. Halden kommune har sammen med høgskoledirektør ved HIØ jobbet med et prosjekt for å få studenter til å i boende i Halden etter endt studie, hun har også jobbet i et prosjekt for kompetansetilflytting og EL-sykkler sammen med prosjektgruppens oppdragsgiver Tommy Payne. \cite{KOMMUNEN-INTERVJU:20} 
 
-Fagpersonene ble invitert til en åpen samtale om deres arbeid og utfordringer de hadde jobbet med innen fagfelt som kunne være relevante for dette prosjektet. Under disse samtalene ble det tatt opp mange relevante innspill og fokusområder som diskuteres i delkapittel~\ref{section:anbefaling-videre-utvikling}. For å kunne gi en vurdering fikk de en kort presentasjon av konseptet og hensikten med dette. I tillegg fikk de se en gjennomgang av prototypen før de ble bedt om å svare på et sett med spørsmål som omhandlet prototypen og konseptet Aktiv Student.
+Deltakerne ble invitert til en åpen samtale om deres arbeid og utfordringer de hadde jobbet med innen fagfelt som kunne være relevante for dette prosjektet. Under disse samtalene ble det tatt opp mange relevante innspill og fokusområder som diskuteres i delkapittel~\ref{section:anbefaling-videre-utvikling}. For å kunne gi en vurdering fikk de en kort presentasjon av konseptet og hensikten med dette. I tillegg fikk de se en gjennomgang av prototypen før de ble bedt om å svare på et sett med spørsmål som omhandlet prototypen og konseptet Aktiv Student.
 
 \subsubsection{Hvordan ser du for deg at dette konseptet ville fungert i praksis?}
 
 \setlength{\leftskip}{2em}
 \tittel{Ville det blitt brukt?}
-Ettersom møtedeltakerne fra Frivilligsentralen i liten grad kjente til studentmiljøet i Halden var det vanskelig å anta om studentene ville brukt tjenesten, men de hadde flere tanker rundt bruken av tjenesten fra organisasjoners side og hvordan det kunne påvirke studenters bruk. Utfordringer rundt organisasjoners markedsføring og publisering ble tatt opp flere ganger under samtalen og var også sentralt for om konseptet Aktiv Student ville blitt brukt i praksis. Wenche Eriksen hadde opplevd at mange organisasjoner var dårlige på å gjøre seg synlige utad, ofte fordi de ikke hadde ressurser eller kunnskaper til å markedsføre seg på mange plattformer. For mange hadde de nok med å følge opp publisering på Facebook. Om tjenesten ikke hadde blitt aktivt brukt av organisasjoner og de ble vanskelig å finne kunne dette også føre til at studentene mistet motivasjonen til å bruke den. \cite{FRIVILLIGSENTRALEN-INTERVJU:21}
+Ettersom møtedeltakerne fra Frivilligsentralen i liten grad kjente til studentmiljøet i Halden var det vanskelig å anta om studentene ville brukt tjenesten, men de hadde flere tanker rundt bruken av tjenesten fra organisasjoners side og hvordan det kunne påvirke studenters bruk. Utfordringer rundt organisasjoners markedsføring og publisering ble tatt opp flere ganger under samtalen og var også sentralt for om konseptet Aktiv Student ville blitt brukt i praksis. Wenche Erichsen hadde opplevd at mange organisasjoner var dårlige på å gjøre seg synlige utad, ofte fordi de ikke hadde ressurser eller kunnskaper til å markedsføre seg på mange plattformer. For mange hadde de nok med å følge opp publisering på Facebook. Om tjenesten ikke hadde blitt aktivt brukt av organisasjoner og de ble vanskelig å finne kunne dette også føre til at studentene mistet motivasjonen til å bruke den. \cite{FRIVILLIGSENTRALEN-INTERVJU:21}
 
 Gina Finsrud tok også opp utfordringen med deling av informasjon fra organisasjonenes side og mente at bruken av tjenesten avhenger om at den inneholdt oppdatert og relevant informasjon. Hun la til at det først og fremst var tilflyttere som ville fått mest bruk for det, i Halden var det mellom 200-350 tilflyttere hvert år og mange fikk hjelp av ansatte i kommunen til å finne fritidsaktiviteter og tilbud. \cite{KOMMUNEN-INTERVJU:20}
 
@@ -493,7 +500,7 @@ Også Gina Finsrud trodde at en slik tjeneste kunne hjelpe nye studenter. Hun me
 
 
 \tittel{Tror du det ville blitt brukt til sin hensikt?}
-Dette mente deltakerne fra Frivilligsentralen at var avhengig av blant annet om organisasjonene brukte plattformen som de skulle slik at studentene kunne enkelt og greit se hva som skjer, hvor det skjer, hvordan de skulle komme i kontakt og om det var noe for dem. I tillegg mente de at det var viktig at studenten klarte å opprette et tillitsforhold til organisasjonen. Wenche Eriksen tok opp et vanlig problem med at organisasjoner ofte byttet kontaktpersoner og kontaktinformasjonen som lå ute var til en tidligere kontaktperson. Ting som ikke fungerte eller som endret seg i systemet ville bli en hindring, mente hun, dette krevde at noen fulgte opp. Hun hadde opplevd at frivilligheten var under press til å hele tiden legge ut informasjon på alle plattformer. Om de derimot ikke klarte å opprettholde dette kunne det slå tilbake på dem når medlemmer og interesserte ikke fikk informasjonen de forventet på akkurat den plattformen de brukte. \cite{FRIVILLIGSENTRALEN-INTERVJU:21}
+Dette mente deltakerne fra Frivilligsentralen at var avhengig av blant annet om organisasjonene brukte plattformen som de skulle slik at studentene kunne enkelt og greit se hva som skjer, hvor det skjer, hvordan de skulle komme i kontakt og om det var noe for dem. I tillegg mente de at det var viktig at studenten klarte å opprette et tillitsforhold til organisasjonen. Wenche Erichsen tok opp et vanlig problem med at organisasjoner ofte byttet kontaktpersoner og kontaktinformasjonen som lå ute var til en tidligere kontaktperson. Ting som ikke fungerte eller som endret seg i systemet ville bli en hindring, mente hun, dette krevde at noen fulgte opp. Hun hadde opplevd at frivilligheten var under press til å hele tiden legge ut informasjon på alle plattformer. Om de derimot ikke klarte å opprettholde dette kunne det slå tilbake på dem når medlemmer og interesserte ikke fikk informasjonen de forventet på akkurat den plattformen de brukte. \cite{FRIVILLIGSENTRALEN-INTERVJU:21}
 
 Ettersom konseptet gikk ut på at studenter hadde mulighet til å få oversikt over alle tilbud på ett sted trodde Gina Finsrud at en slik tjeneste ville blitt brukt til sin hensikt. Hun la til at studenter kunne ha mange ønsker til fritidsaktiviteter, noen ville feste imens andre ville ut i naturen. Hun trodde at Aktiv Student kunne bidra til et sosialt fellesskap i organiserte former. \cite{KOMMUNEN-INTERVJU:20}
 
@@ -513,33 +520,33 @@ En slik tjeneste kunne ført til at nye studenter følte mer tilhørighet, mente
 Et aspekt som Gina Finsrud nevnte var at personer som føler tilhørighet tar bedre ansvar for stedet de bor. Hun tok opp New York som eksempel, der de hadde et problem med tagging, forsøpling og hærverk for 15-20 år siden. Etter at det ble innført nulltoleranse for dette førte det til en holdningsendring blant innbyggerne da de så at ting rundt seg var i orden og ble mer stolt av å være New Yorkere. Hun mente at dette dreide seg mye om det å være en del av et felleskap og se at folk bryr seg. \cite{KOMMUNEN-INTERVJU:20}
 
 \tittel{Psykisk helse og ensomhet}
-Dette handlet mye om å våge å by på seg selv, mente Wenche Eriksen. Det var viktig å investere i andre mennesker for å kanskje kunne få noe tilbake. De andre møtedeltakerne var enige. Et eksempel var om en student klippet gresset for en eldre person så fikk studenten kanskje kake og kaffe etterpå, i tillegg fikk begge parter noen å snakke med. Å utfordre seg selv gjennom å bli kjent med andre på tvers av grupper var også viktig i forhold til psykisk helse og ensomhet, mente de. Spesielt når man flyttet til en nytt sted. \cite{FRIVILLIGSENTRALEN-INTERVJU:21}
+Dette handlet mye om å våge å by på seg selv, mente Wenche Erichsen. Det var viktig å investere i andre mennesker for å kanskje kunne få noe tilbake. De andre møtedeltakerne var enige. Et eksempel var om en student klippet gresset for en eldre person så fikk studenten kanskje kake og kaffe etterpå, i tillegg fikk begge parter noen å snakke med. Å utfordre seg selv gjennom å bli kjent med andre på tvers av grupper var også viktig i forhold til psykisk helse og ensomhet, mente de. Spesielt når man flyttet til en nytt sted. \cite{FRIVILLIGSENTRALEN-INTERVJU:21}
 
 I relasjon til folkehelse var det viktig å fokusere på psykisk helse og ensomhet, sa Gina Finsrud. Hun påpekte at utenforskap og ensomhet er roten til mye vondt. Hun nevnte også at dette kunne være et stort økonomisk tap, da personer som følte seg utenfor kunne bli mindre effektive i arbeidslivet.
-I tillegg tok hun opp at det var mulig å søke om midler for utvikling av en tjeneste som kunne bidra innenfor folkehelse eller integrering. \cite{KOMMUNEN-INTERVJU:20}
+I tillegg tok hun opp at det var mulig og enklere å søke om midler for utvikling en drift til en tjeneste som kunne bidra innenfor folkehelse eller integrering. \cite{KOMMUNEN-INTERVJU:20}
 
 \setlength{\leftskip}{0pt}
 
 \subsubsection{Hvordan kunne konseptet blitt synliggjort og markedsført opp mot studenter ved HIØ og organisasjoner i området?}
 Deltakerne fra Frivilligsentralen så for seg at organisasjonene kom til å bli vanskeligst å markedsføre opp mot. De mente at det ville vært best å møte organisasjonene fysisk eller, om det ikke var mulig, over en telefonsamtale, ettersom det var lett å avvise eller ignorere digital kontakt. De foreslo også å presentere for organisasjonene hvor stor interessen var for tjenesten fra studentenes side, slik at organisasjonene kunne få et inntrykk av markedet. \cite{FRIVILLIGSENTRALEN-INTERVJU:21}
 
-Gina Finsrud foreslo å bruke HR-nettverket i Halden som kunne markedsføre opp mot innflyttere, kulturrådet, idrettsrådet og turistselskapene. I tillegg anbefalte hun å gå gjennom frivillighetsregisteret og kontakte alle relevante aktører, kontakte Frivilligsentralen, voksenopplæringen, Halden Kompetansesenter og snakke med kirkevergen som kunne nå ut til menigheter i området. \cite{KOMMUNEN-INTERVJU:20}
+Gina Finsrud foreslo å bruke HR-nettverket i Halden som kunne markedsføre opp mot tilflyttere, nyansatte, Halden kommune, idrettsrådet og turistselskapene. I tillegg anbefalte hun å gå gjennom frivillighetsregisteret og kontakte alle relevante aktører, kontakte Frivilligsentralen, voksenopplæringen, Halden Kompetansesenter og snakke med kirkevergen som kunne nå ut til menigheter i området. \cite{KOMMUNEN-INTERVJU:20}
 
 \subsubsection{Har du noen andre tanker om prototypen eller konseptet du føler er relevant å ta med?}
-En gylden mulighet for å skape kontakt mellom organisasjoner og studenter var når organisasjonene hadde større arrangement eller noe stort som skjedde, sa deltakerne fra Frivilligsentralen. Da burde studentene mobiliseres og organisasjonene kunne vise seg fram og rekruttere folk. Et annet forslag var å arrangere opplegg på HIØ med frivilligheten og organisasjoner vinklet mot forskjellige fagområder, slik at studentene kunne deles opp i mindre grupper og enklere kunne få kontakt med organisasjonene. De understreket også viktigheten av at det var en noen som hadde jobben med å drifte en slik tjeneste og at de hadde den menneskelig kunnskapen i bunn, ikke kun det tekniske. Wenche Eriksen snakket av egen erfaring og påpekte at det var viktig å kunne finne de riktige kontaktpersonene både inn mot organisasjonene og studentene. \cite{FRIVILLIGSENTRALEN-INTERVJU:21}
+En gylden mulighet for å skape kontakt mellom organisasjoner og studenter var når organisasjonene hadde større arrangement eller noe stort som skjedde, sa deltakerne fra Frivilligsentralen. Da burde studentene mobiliseres og organisasjonene kunne vise seg frem og rekruttere folk. Et annet forslag var å arrangere opplegg på HIØ med frivilligheten og organisasjoner vinklet mot forskjellige fagområder, slik at studentene kunne deles opp i mindre grupper og enklere kunne få kontakt med organisasjonene. De understreket også viktigheten av at det var en noen som hadde jobben med å drifte en slik tjeneste og at de hadde den menneskelig kunnskapen i bunn, ikke kun det tekniske. Wenche Erichsen snakket av egen erfaring og påpekte at det var viktig å kunne finne de riktige kontaktpersonene både inn mot organisasjonene og studentene. \cite{FRIVILLIGSENTRALEN-INTERVJU:21}
 
 Drift av tjenesten ble også tatt opp av Gina Finsrud som noe som var avhengig av en god løsning. Det var viktig å drive kontinuering markedsføring for å beholde tjenestens aktualitet og holde informasjonen oppdatert. Hun mente at det trengtes penger til drift av en slik tjeneste. En person måtte ha jobben med å innhente informasjon fra organisasjoner siden mange av dem sannsynlig ikke kom til å prioritere legge ut informasjon på eget initiativ. Hun hadde erfart at kontaktpersoner i organisasjoner allerede hadde veldig mye å gjøre. Som oftest prioriterte de først det som skjedde innad i organisasjonen, imens informasjon utad ble nedprioritert om de ikke skulle promotere et spesielt arrangement. \cite{KOMMUNEN-INTERVJU:20}
 
 \subsection{Oppdragsgivers helhetlige vurdering av arbeidet}
 Oppdragsgiveren måtte selvfølgelig få gitt sin helhetlige vurdering av arbeidet til gruppen. Så for å få en oversiktlig vurdering over alle delene av arbeidet til gruppen, stilte vi en rekke spørsmål til oppdragsgiver rundt vurderingen. 
 
-\paragraph{Er du som oppdragsgiver fornøyd med resultatet?}
+\subsubsection{}{Er du som oppdragsgiver fornøyd med resultatet?}
 Oppdragsgiver var fornøyd med resultatet av prosjektet til gruppen. Hele prosjektet så mye mer lovende ut etter at gruppen tok beslutningen om å lage en prototype istedenfor en ferdig utviklet tjeneste. Siden det ble lagd en prototype hadde gruppen bedre mulighet til å finne mange gode, gjennomtenkte løsninger og et godt formet konsept. Som et resultat av dette ser prosjektet bedre ut enn tankene som oppdragsgiver hadde i utgangspunktet. Oppdragsgiver ville vært fornøyd hvis tjenesten hadde blitt lansert slik det ser ut nå, selv om oppdragsgiver skulle ønsket at det ble levert en ferdig utviklet tjeneste.
 
-\paragraph{Oppfyller prototypen kriteriene satt av deg som oppdragsgiver i prosjektsbeskrivelsen?}
-Det har blitt oppnådd mer enn det prosjektbeskrivelsen ba om, selv om det er noen små mangler. Det er ikke blitt laget en webcrawler til å samle inn info til tjenesten. Prosjektet har blitt vinklet mot studenter siden gruppen har fokusert på Feide innlogging, men om i framtiden oppdragsgiver vil utvide til mer enn studenter kan innlogging endres til f.eks BankID eller MinID. Kartleggingstesten var noe som gruppen kom med selv og oppdragsgiver synes at det var kult å ha med. 
+\subsubsection{}{Oppfyller prototypen kriteriene satt av deg som oppdragsgiver i prosjektsbeskrivelsen?}
+Det har blitt oppnådd mer enn det prosjektbeskrivelsen ba om, selv om det er noen små mangler. Det er ikke blitt laget en webcrawler til å samle inn info til tjenesten. Prosjektet har blitt vinklet mot studenter siden gruppen har fokusert på Feide innlogging, men om i fremtiden oppdragsgiver vil utvide til mer enn studenter kan innlogging endres til f.eks BankID eller MinID. Kartleggingstesten var noe som gruppen kom med selv og oppdragsgiver synes at det var kult å ha med. 
 
-\paragraph{Har prosjektgruppens arbeidsprosess oppfylt forventningene dine som oppdragsgiver?}
+\subsubsection{}{Har prosjektgruppens arbeidsprosess oppfylt forventningene dine som oppdragsgiver?}
 
 {\bf a. Er det noe du skulle ønske vi hadde gjort annerledes?}
 Oppdragsgiver syntes at han kunne fått flere tilbakemeldinger om hva gruppen har snakket med veileder om. Det kunne vært morsomt og interessant hvis gruppen hadde kommet med flere muligheter for en retning som prosjektet kunne gå, med positive og negative ting klargjort for oppdragsgiveren og så gitt oppdragsgiver muligheten til å velge.
@@ -547,10 +554,10 @@ Oppdragsgiver syntes at han kunne fått flere tilbakemeldinger om hva gruppen ha
 {\bf b. Er det noe du synes er spesielt bra?}
 Det har vært fint at vi har hatt en person fra gruppen som har hatt hovedansvar i samtalene med oppdragsgiver, slik at det ikke blir noe av at folk snakker over hverandre eller avbryter noen. Dette har gjort at kommunikasjonen  har gått uten problemer. Gruppen har jobbet veldig selvstendig men samtidig holdt oppdragsgiver oppdatert om endringer gruppen har gjort og avgjørelser som har blitt tatt.
 
-\paragraph{Har prosjektgruppens rådgiving og kompetanse vært pålitelig, forståelig og nyttig?}
+\subsubsection{}{Har prosjektgruppens rådgiving og kompetanse vært pålitelig, forståelig og nyttig?}
 Ja til alle, med tanke på gruppens egen IT-Kunskap og ekspertene som gruppen har tatt i bruk. Gruppen har også tatt alle tilbakemeldinger de har fått veldig seriøst.
 
-\paragraph{Har du noen tanker om samfunnsverdien og nytten av denne tjenesten i forhold til:}
+\subsubsection{}{Har du noen tanker om samfunnsverdien og nytten av denne tjenesten i forhold til:}
 
 {\bf a. Relasjon mellom studenter og fastboende i kommunen}
 Introduksjonen av chatefunksjonen har styrket tjenesten og legger til rette for at det kan bli en bedre relasjon mellom studenter og fastboende, samt økt sannsynlighet for kommunikasjon mellom bruker å organisasjon.
@@ -561,8 +568,8 @@ Muligheten til å skape en tilhørighet for studenter og kommunen kunne vært et
 {\bf c. Psykisk helse og ensomhet}
 Oppdragsgiver mener at det absolutt kan hjelpe folk som sliter med psykisk helse og ensomhet. Dette er også en av hoved grunnene til at han publiserte bachelor oppgaven i første omgang.
 
-\paragraph{Har du noen konkrete tanker eller planer for tjenestens framtid?}
-Oppdragsgiver vil først få det endelige konseptet og bli kjent med det. Etter det vil han ta et standpunkt til om det er noe å gå videre med og i hvilken form. Det må vurderes om Aktiv Student er verdt pengene og om ressursene er tilgjengelig. Tjenesten burde kanskje være selvstendig, uavhengig av HIØ. Prosjektet kan være en kul ting å gå videre med i framtiden, kanskje en annen prosjektgruppe vil jobbe videre med tjenesten.
+\subsubsection{}{Har du noen konkrete tanker eller planer for tjenestens fremtid?}
+Oppdragsgiver vil først få det endelige konseptet og bli kjent med det. Etter det vil han ta et standpunkt til om det er noe å gå videre med og i hvilken form. Det må vurderes om Aktiv Student er verdt pengene og om ressursene er tilgjengelig. Tjenesten burde kanskje være selvstendig, uavhengig av HIØ. Prosjektet kan være en kul ting å gå videre med i fremtiden, kanskje en annen prosjektgruppe vil jobbe videre med tjenesten.
 
 
 
