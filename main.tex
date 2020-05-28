@@ -25,6 +25,9 @@
 \newcommand{\skisser}{skisser/Illustrasjoner/Skisser}
 \newcommand{\tittel}[1]{\paragraph{#1}\mbox{}\\}
 \newcommand{\largetittel}[1]{\subsubsection{\large{#1}}}
+\newcommand{\fet}[1]{{\bf #1} \newline}
+
+\setlength{\parskip}{1em}
 
 \begin{document}
 
@@ -69,7 +72,7 @@
 % BACK MATTER
     % DO NOT CHANGE
     %-------------------------------------------------   
-    \bibliographystyle{plain} % IEEE    
+    \bibliographystyle{apalike}
     \bibliography{project_bibliography}
     \addcontentsline{toc}{chapter}{Bibliografi}
     %-------------------------------------------------
@@ -83,6 +86,7 @@
     \input{skisser1}
     \input{skisser2}
     \input{skisser3}
+    \input{prosjektbeskrivelse}
     %-------------------------------------------------
     
     \cleardoublepage %DO NOT CHANGE
